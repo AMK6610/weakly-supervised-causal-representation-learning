@@ -6,8 +6,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from ws_crl.gumbel import sample_permutation, gumbel_bernouilli
-from ws_crl.utils import upper_triangularize, topological_sort
+from ...ws_crl.gumbel import sample_permutation, gumbel_bernouilli
+from ...ws_crl.utils import upper_triangularize, topological_sort
 
 
 class LearnedGraph(nn.Module):

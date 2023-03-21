@@ -1,7 +1,7 @@
 # Copyright (c) 2022 Qualcomm Technologies, Inc.
 # All rights reserved.
 
-from ws_crl.lcm.base import BaseLCM
+from .base import BaseLCM
 
 
 class FlowLCM(BaseLCM):

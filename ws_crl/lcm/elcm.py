@@ -4,7 +4,7 @@
 import numpy as np
 import torch
 
-from ws_crl.lcm.base import BaseLCM
+from .base import BaseLCM
 
 
 class ELCM(BaseLCM):

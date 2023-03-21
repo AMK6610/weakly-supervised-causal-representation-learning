@@ -6,9 +6,9 @@
 import torch
 from torch import nn
 
-from ws_crl.causal.interventions import InterventionPrior
-from ws_crl.encoder.base import Inverse
-from ws_crl.utils import logmeanexp
+from ..causal.interventions import InterventionPrior
+from ..encoder.base import Inverse
+from ...ws_crl.utils import logmeanexp
 
 MEAN_VARS = {}
 LOGMEANEXP_VARS = {}

@@ -9,9 +9,9 @@ import nflows.nn.nets
 import torch
 from torch import nn
 
-from ws_crl.causal.graph import ENCOLearnedGraph, DDSLearnedGraph, FixedOrderLearnedGraph
-from ws_crl.transforms import make_mlp_structure_transform, MaskedSolutionTransform
-from ws_crl.utils import mask, clean_and_clamp
+from .graph import ENCOLearnedGraph, DDSLearnedGraph, FixedOrderLearnedGraph
+from ...ws_crl.transforms import make_mlp_structure_transform, MaskedSolutionTransform
+from ...ws_crl.utils import mask, clean_and_clamp
 
 DEFAULT_BASE_DENSITY = nflows.distributions.StandardNormal((1,))
 

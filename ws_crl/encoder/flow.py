@@ -5,8 +5,8 @@ import nflows
 import torch
 from torch import nn
 
-from ws_crl.encoder.base import Encoder
-from ws_crl.transforms import make_scalar_transform
+from .base import Encoder
+from ...ws_crl.transforms import make_scalar_transform
 
 
 class InvertibleEncoder(Encoder):

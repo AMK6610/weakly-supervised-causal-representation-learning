@@ -4,8 +4,8 @@
 import numpy as np
 import torch
 
-from ws_crl.encoder import gaussian_encode
-from ws_crl.lcm.base import BaseLCM
+from ..encoder import gaussian_encode
+from .base import BaseLCM
 
 
 class ILCM(BaseLCM):

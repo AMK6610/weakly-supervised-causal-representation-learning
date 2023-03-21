@@ -11,26 +11,26 @@ import mlflow
 import pandas as pd
 from collections import defaultdict
 
-from ws_crl.encoder import SONEncoder, GaussianEncoder
-from ws_crl.lcm import FlowLCM
-from ws_crl.training import VAEMetrics
-from ws_crl.metrics import compute_dci
-from ws_crl.causal.graph import create_graph
-from ws_crl.causal.scm import (
+from ..ws_crl.encoder import SONEncoder, GaussianEncoder
+from ..ws_crl.lcm import FlowLCM
+from ..ws_crl.training import VAEMetrics
+from ..ws_crl.metrics import compute_dci
+from ..ws_crl.causal.graph import create_graph
+from ..ws_crl.causal.scm import (
     MLPFixedOrderSCM,
     MLPVariableOrderCausalModel,
     UnstructuredPrior,
     FixedGraphLinearANM,
 )
-from ws_crl.causal.implicit_scm import MLPImplicitSCM
-from ws_crl.lcm import ELCM, ILCM
-from ws_crl.posthoc_graph_learning import (
+from ..ws_crl.causal.implicit_scm import MLPImplicitSCM
+from ..ws_crl.lcm import ELCM, ILCM
+from ..ws_crl.posthoc_graph_learning import (
     compute_implicit_causal_effects,
     find_topological_order,
     run_enco,
 )
 
-from experiments.experiment_utils import (
+from .experiment_utils import (
     initialize_experiment,
     save_config,
     save_model,

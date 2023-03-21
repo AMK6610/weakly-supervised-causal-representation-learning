@@ -12,10 +12,10 @@ from itertools import chain
 from omegaconf import OmegaConf
 from collections import defaultdict
 
-from ws_crl.causal.interventions import HeuristicInterventionEncoder
-from ws_crl.nets import make_mlp
-from ws_crl.plotting import init_plt
-from ws_crl.utils import flatten_dict, update_dict
+from ..ws_crl.causal.interventions import HeuristicInterventionEncoder
+from ..ws_crl.nets import make_mlp
+from ..ws_crl.plotting import init_plt
+from ..ws_crl.utils import flatten_dict, update_dict
 
 logger = logging.getLogger(__name__)
 logging_initialized = False

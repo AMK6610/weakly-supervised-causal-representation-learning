@@ -6,7 +6,7 @@ import nflows.utils
 import torch
 from torch import nn
 
-from ws_crl.nets import make_mlp
+from ..ws_crl.nets import make_mlp
 
 
 class MaskedSolutionTransform(nn.Module):

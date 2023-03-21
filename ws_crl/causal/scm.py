@@ -8,15 +8,15 @@ import nflows.nn.nets
 import torch
 from torch import nn
 
-from ws_crl import transforms
-from ws_crl.causal.graph import (
+from ...ws_crl import transforms
+from .graph import (
     ENCOLearnedGraph,
     DDSLearnedGraph,
     FixedOrderLearnedGraph,
 )
-from ws_crl.nets import Quadratic
-from ws_crl.transforms import make_intervention_transform, make_mlp_structure_transform
-from ws_crl.utils import topological_sort, mask, clean_and_clamp
+from ...ws_crl.nets import Quadratic
+from ...ws_crl.transforms import make_intervention_transform, make_mlp_structure_transform
+from ...ws_crl.utils import topological_sort, mask, clean_and_clamp
 
 DEFAULT_BASE_DENSITY = nflows.distributions.StandardNormal((1,))
 

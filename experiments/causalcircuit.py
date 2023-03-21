@@ -13,7 +13,7 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader
 from tqdm import trange
 
-from experiments.experiment_utils import (
+from .experiment_utils import (
     initialize_experiment,
     save_config,
     save_model,
@@ -30,21 +30,21 @@ from experiments.experiment_utils import (
     determine_graph_learning_settings,
     frequency_check,
 )
-from ws_crl.causal.implicit_scm import MLPImplicitSCM
-from ws_crl.causal.scm import (
+from ..ws_crl.causal.implicit_scm import MLPImplicitSCM
+from ..ws_crl.causal.scm import (
     MLPFixedOrderSCM,
     MLPVariableOrderCausalModel,
     UnstructuredPrior,
 )
-from ws_crl.encoder import GaussianEncoder
-from ws_crl.lcm import ELCM, ILCM
-from ws_crl.metrics import compute_dci
-from ws_crl.posthoc_graph_learning import (
+from ..ws_crl.encoder import GaussianEncoder
+from ..ws_crl.lcm import ELCM, ILCM
+from ..ws_crl.metrics import compute_dci
+from ..ws_crl.posthoc_graph_learning import (
     compute_implicit_causal_effects,
     find_topological_order,
     run_enco,
 )
-from ws_crl.training import VAEMetrics
+from ..ws_crl.training import VAEMetrics
 
 
 @hydra.main(config_path="../config", config_name="causalcircuit_ilcm")

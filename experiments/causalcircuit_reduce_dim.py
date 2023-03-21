@@ -14,18 +14,18 @@ from collections import defaultdict
 from PIL import Image
 from io import BytesIO
 
-from ws_crl.encoder import ImageEncoder, ImageDecoder, CoordConv2d
+from ..ws_crl.encoder import ImageEncoder, ImageDecoder, CoordConv2d
 
-from ws_crl.training import VAEMetrics
-from ws_crl.causal.scm import (
+from ..ws_crl.training import VAEMetrics
+from ..ws_crl.causal.scm import (
     MLPFixedOrderSCM,
     MLPVariableOrderCausalModel,
     UnstructuredPrior,
 )
-from ws_crl.causal.implicit_scm import MLPImplicitSCM
-from ws_crl.lcm import ELCM, ILCM
-from ws_crl.utils import get_first_batch
-from experiments.experiment_utils import (
+from ..ws_crl.causal.implicit_scm import MLPImplicitSCM
+from ..ws_crl.lcm import ELCM, ILCM
+from ..ws_crl.utils import get_first_batch
+from .experiment_utils import (
     initialize_experiment,
     save_config,
     save_model,

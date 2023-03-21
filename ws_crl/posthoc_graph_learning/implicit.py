@@ -3,7 +3,7 @@
 
 from functools import lru_cache
 import torch
-from ws_crl.utils import mask
+from ...ws_crl.utils import mask
 
 
 # noinspection PyUnresolvedReferences

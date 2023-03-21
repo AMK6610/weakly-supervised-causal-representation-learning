@@ -6,9 +6,9 @@ from torch import nn as nn
 from torch.nn import functional as F
 from itertools import chain
 
-from ws_crl.encoder.vae import gaussian_encode
-from ws_crl.nets import make_mlp, make_elementwise_mlp
-from ws_crl.utils import generate_permutation
+from .vae import gaussian_encode
+from ...ws_crl.nets import make_mlp, make_elementwise_mlp
+from ...ws_crl.utils import generate_permutation
 
 
 def add_coords(x):

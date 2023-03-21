@@ -6,9 +6,9 @@ from torch import nn
 from torch.nn import functional as F
 from itertools import chain
 
-from ws_crl.encoder.base import Encoder
-from ws_crl.nets import make_mlp
-from ws_crl.utils import inverse_softplus
+from .base import Encoder
+from ...ws_crl.nets import make_mlp
+from ...ws_crl.utils import inverse_softplus
 
 
 class GaussianEncoder(Encoder):
