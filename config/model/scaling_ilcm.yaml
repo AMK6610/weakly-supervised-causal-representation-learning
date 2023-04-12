@@ -20,8 +20,10 @@ encoder:
   hidden_units: 64
   hidden_layers: 2
   std: 0.01
-  min_std: 0.0001
+  min_std: 0.001
   fix_std: false
+  load_pretrained: true
+  path: ''
 
 decoder:
   hidden_units: 64
