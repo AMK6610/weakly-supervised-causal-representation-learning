@@ -11,6 +11,7 @@ import torch
 from itertools import chain
 from omegaconf import OmegaConf
 from collections import defaultdict
+import sys
 
 from ..ws_crl.causal.interventions import HeuristicInterventionEncoder
 from ..ws_crl.nets import make_mlp
@@ -75,6 +76,11 @@ def initialize_experiment(cfg):
 
 def initialize_experiment_folder(cfg):
     """Creates experiment folder"""
+
+    print(f'path is: {Path(cfg.general.exp_dir) / "metrics" / "test_metrics.csv"}')
+    if os.path.exists(Path(cfg.general.exp_dir) / "metrics" / "test_metrics.csv"):
+        print("Experiment already done")
+        sys.exit()
 
     # Check experiment folder
     exp_dir = Path(cfg.general.exp_dir).resolve()
