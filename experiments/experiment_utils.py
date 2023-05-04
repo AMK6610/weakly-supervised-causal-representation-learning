@@ -187,6 +187,11 @@ def compute_metrics_on_dataset(cfg, model, criteria, data_loader, device):
             intervention_labels.to(device),
             true_interventions.to(device),
         )
+
+        if len(x1.shape) <= 2:
+                x1 = model.score_model.init_layer(x1)
+                x2 = model.score_model.init_layer(x2)
+
         log_prob, model_outputs = model(
             x1,
             x2,
