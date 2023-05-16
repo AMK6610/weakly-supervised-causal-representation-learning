@@ -192,7 +192,7 @@ def compute_metrics_on_dataset(cfg, model, criteria, data_loader, device):
         #         x1 = model.score_model.init_layer(x1)
         #         x2 = model.score_model.init_layer(x2)
 
-        log_prob, model_outputs = model(
+        log_prob, model_outputs, score_model_loss = model(
             x1,
             x2,
             beta=cfg.eval.beta,
