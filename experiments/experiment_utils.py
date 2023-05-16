@@ -31,8 +31,8 @@ def initialize_experiment(cfg):
     initialize_logger(cfg)
 
     # Set up MLflow tracking location
-    Path(cfg.general.mlflow.db).parent.mkdir(exist_ok=True)
-    mlflow.set_tracking_uri(f"sqlite:///{Path(cfg.general.mlflow.db).resolve()}")
+    # Path(cfg.general.mlflow.db).parent.mkdir(exist_ok=True)
+    # mlflow.set_tracking_uri(f"sqlite:///{Path(cfg.general.mlflow.db).resolve()}")
 
     # Create MLflow experiment if it doesn't exist already
     Path(cfg.general.mlflow.artifacts).mkdir(exist_ok=True)
